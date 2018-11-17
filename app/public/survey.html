@@ -33,7 +33,7 @@
           </div>
           <div class="modal-body">
             <img src="" id="displayImage" height ="90%" width="90%">
-            <p id= "finderDisplay">Modal body text goes here.</p>
+            <p>Modal body text goes here.</p>
           </div>
         </div>
       </div>
@@ -65,7 +65,8 @@
         <input
           type="email"
           class="form-control"
-          id="exampleFormControlInput1"
+          id="name"
+          value=""
           placeholder="Your Name"
         />
       </div>
@@ -74,7 +75,8 @@
         <input
           type="email"
           class="form-control"
-          id="exampleFormControlInput1"
+          id="photo"
+          value = ""
           placeholder="URL Link Here"
         />
       </div>
@@ -194,18 +196,19 @@
   <script type="text/javascript">
     $("#submitFriend").on("click", function(){
       event.preventDefault();
-      var addFriend = {
+      var newFriend = {
         name: $("#name").val().trim(),
         photo: $("#photo").val().trim(),
         scores: [$("#q1").val().trim(),$("#q2").val().trim(),$("#q3").val().trim(),$("#q4").val().trim(),$("#q5").val().trim(),$("#q6").val().trim(),$("#q7").val().trim(),$("#q8").val().trim(),$("#q9").val().trim(),$("#q10").val().trim()]
       };
       alert("Searching for bestie...");
-      $.post("/api/friends", addFriend)
+      $.post("/api/friends", newFriend)
         .done(function(data){
           console.log(data);
-          $("#finderDisplay").text(data.name);
+          $("#img-holder").hide();
+          $("#img-holder").show(data.scores);
+          $("#results-txt").text(data.name);
           $("#displayImage").attr( "src", data.photo);
-          $("#img-holder").modal("show");
         });
         $("#name").val("");
         $("#photo").val("");

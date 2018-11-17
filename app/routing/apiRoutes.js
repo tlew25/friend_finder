@@ -33,14 +33,15 @@ module.exports = function(app) {
   // Then the server saves the data to the tableData array)
   // ---------------------------------------------------------------------------
 
-  app.post("/api/friends", function(req, res) {
+  app.post("/api/friends", function(req, res, body) {
     // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
     // It will do this by sending out the value "true" have a table
     // req.body is available since we're using the body parsing middleware
+    console.log("POSTING DATA...");
 
     // variables for adding new friend to database server 
-    var addFriend = req.body;
-    var addedScore = addFriend.scores; 
+    var newFriend = req.body;
+    var newPoints = newFriend.scores; 
     var total = 0;
     var friendMatch = 1000; // set value to big number
     var friendName = "";
@@ -53,8 +54,8 @@ module.exports = function(app) {
       total = 0;
 
       // create second for loop for calculation of intScore of new friend to actual data stored in array
-      for( var t = 0; t < addedScore.length; t++){
-        var totalDifference = Math.abs(addedScore[t] - friends[i].scores[t]);
+      for( var t = 0; t < newPoints.length; t++){
+        var totalDifference = Math.abs(newPoints[t] - friends[i].scores[t]);
         total += totalDifference;
       }
       if(total < friendMatch){
@@ -80,9 +81,7 @@ module.exports = function(app) {
 
   app.post("/api/clear", function(req, res) {
     // Empty out the arrays of data
-    tableData.length = [];
-    waitListData.length = [];
-
+    friends.length = [];
     res.json({ ok: true });
   })
 }
