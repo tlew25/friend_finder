@@ -6,9 +6,6 @@
 var friends = require("../data/friends");
 var path = require("path");
 
-
-
-
 // ===============================================================================
 // ROUTING
 // ===============================================================================
@@ -39,26 +36,26 @@ module.exports = function(app) {
     // req.body is available since we're using the body parsing middleware
     console.log("POSTING DATA...");
 
-    // variables for adding new friend to database server 
+    // variables for adding new friend to database server
     var newFriend = req.body;
-    var newPoints = newFriend.scores; 
+    var newPoints = newFriend.scores;
     var total = 0;
     var friendMatch = 1000; // set value to big number
     var friendName = "";
     var friendPic = "";
-    //  
+    //
 
     // use a for loop to shuffle through friends data array in module exports
-    for( var i = 0; i < friends.length; i++){
+    for (var i = 0; i < friends.length; i++) {
       //
       total = 0;
 
       // create second for loop for calculation of intScore of new friend to actual data stored in array
-      for( var t = 0; t < newPoints.length; t++){
+      for (var t = 0; t < newPoints.length; t++) {
         var totalDifference = Math.abs(newPoints[t] - friends[i].scores[t]);
         total += totalDifference;
       }
-      if(total < friendMatch){
+      if (total < friendMatch) {
         friendMatch = total;
         console.log("Best Match =", friends[i]);
         console.log("Best Match =", friends[i]);
@@ -67,13 +64,11 @@ module.exports = function(app) {
         friendMatch = total;
         friendName = friends[i].name;
         friendPic = friends[i].photo;
-    
       }
     }
     friends.push(newFriend);
-    res.json({status: "OK", name: friendName, photo: friendPic});
-  })
-    
+    res.json({ status: "OK", name: friendName, photo: friendPic });
+  });
 
   // ---------------------------------------------------------------------------
   // I added this below code so you could clear out the table while working with the functionality.
@@ -83,5 +78,5 @@ module.exports = function(app) {
     // Empty out the arrays of data
     friends.length = [];
     res.json({ ok: true });
-  })
-}
+  });
+};
