@@ -27,7 +27,7 @@ var friends = [
   {
     name: "Darius",
     photo:
-      "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+      "https://i.pinimg.com/originals/22/ab/8e/22ab8e08e5404e8e8459212dec80626f.jpg",
     scores: [5, 2, 4, 3, 5, 2, 2, 2, 4, 1]
   },
   {
