@@ -27,13 +27,13 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 id ="results-txt"class="modal-title">Results</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
             <img src="" id="displayImage" height ="90%" width="90%">
-            <p>Modal body text goes here.</p>
+            <p>Results!</p>
           </div>
         </div>
       </div>
@@ -203,10 +203,14 @@
       $.post("/api/friends", newFriend)
         .done(function(data){
           console.log(data);
+          console.log(data.photo);
           $("#img-holder").hide();
           $("#img-holder").show(data.scores);
           $("#results-txt").text(data.name);
           $("#displayImage").attr( "src", data.photo);
+          $(document).on("click", "#close", function(){
+            $("#img-holder").hide();
+          })
         });
         $("#name").val("");
         $("#photo").val("");
