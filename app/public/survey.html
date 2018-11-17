@@ -33,7 +33,7 @@
           </div>
           <div class="modal-body">
             <img src="" id="displayImage" height ="90%" width="90%">
-            <p>Results!</p>
+            <p>Your new friend is here!</p>
           </div>
         </div>
       </div>
@@ -83,6 +83,7 @@
           >1. How much do you like Rap music?</label
         >
         <select class="form-control" id="q1">
+            <option value = "">Select</option>
           <option value = "1">Not one bit, turn that $#@! off!</option>
           <option value = "2">Ehhh, it's not my first choice</option>
           <option value = "3">Not too bad</option>
@@ -93,6 +94,7 @@
       <div class="form-group">
         <label for="exampleFormControlSelect1">2. How creative are you?</label>
         <select class="form-control" id="q2">
+            <option value = "">Select</option>
           <option value = "1">Can't do stick figures</option>
           <option value = "2">Not my forte</option>
           <option value = "3">I can watercolor</option>
@@ -105,6 +107,7 @@
           >3. Do you consider yourself a person who is clean/organized?</label
         >
         <select class="form-control" id="q3">
+            <option value = "">Select</option>
           <option value = "1">I'm messy dude</option>
           <option value = "2">Can't find a pair of socks that match ever</option>
           <option value = "3">I can keep my apartment clean enough for guests</option>
@@ -117,6 +120,7 @@
           >4. What is your level of competitivness in general?</label
         >
         <select class="form-control" id="q4">
+            <option value = "">Select</option>
           <option value = "1">Wouldn't crush a grape with a sledgehammer</option>
           <option value = "2">Not enough</option>
           <option value = "3">I can get rowdy</option>
@@ -129,6 +133,7 @@
           >5. Are you a leader?
         </label>
         <select class="form-control" id="q5">
+            <option value = "">Select</option>
           <option value = "1">No way</option>
           <option value = "2">I falter easily</option>
           <option value = "3">I have chapperoned before</option>
@@ -139,6 +144,7 @@
       <div class="form-group">
         <label for="exampleFormControlSelect1">6. You are more of a fighter than a lover</label>
         <select class="form-control" id="q6">
+            <option value = "">Select</option>
           <option value = "1">I'm weak</option>
           <option value = "2">Not much of a fighter</option>
           <option value = "3">I will defend myself</option>
@@ -149,6 +155,7 @@
       <div class="form-group">
         <label for="exampleFormControlSelect1">7. You die for your favorite sports team</label>
         <select class="form-control" id="q7">
+            <option value = "">Select</option>
           <option value = "1">Who cares</option>
           <option value = "2">We have a team?</option>
           <option value = "3">Fair-weather fan</option>
@@ -159,6 +166,7 @@
       <div class="form-group">
         <label for="exampleFormControlSelect1">8. How frequently do you smack while eating?</label>
         <select class="form-control" id="q8">
+            <option value = "">Select</option>
           <option value = "1">Not much</option>
           <option value = "2">Ocassionally</option>
           <option value = "3">Quietly</option>
@@ -169,6 +177,7 @@
       <div class="form-group">
         <label for="exampleFormControlSelect1">9. Survey's easily annoy you</label>
         <select class="form-control" id="q9">
+            <option value = "">Select</option>
           <option value = "1">I hate them</option>
           <option value = "2">Waste of time</option>
           <option value = "3">They're okay</option>
@@ -179,6 +188,7 @@
       <div class="form-group">
         <label for="exampleFormControlSelect1">10. How frequently do you drink cold beer?</label>
         <select class="form-control" id="q10">
+            <option value = "">Select</option>
           <option value = "1">What is a beer?</option>
           <option value = "2">Ehhhhhh</option>
           <option value = "3">From time, to time</option>
@@ -214,7 +224,16 @@
         });
         $("#name").val("");
         $("#photo").val("");
-        [$("#q1").val("").trim(),$("#q2").val("").trim(),$("#q3").val("").trim(),$("#q4").val("").trim(),$("#q5").val("").trim(),$("#q6").val("").trim(),$("#q7").val("").trim(),$("#q8").val("").trim(),$("#q9").val("").trim(),$("#q10").val("").trim()]
+         $("#q1").val("")
+         $("#q2").val("")
+         $("#q3").val("")
+         $("#q4").val("")
+         $("#q5").val("")
+         $("#q6").val("")
+         $("#q7").val("")
+         $("#q8").val("")
+         $("#q9").val("")
+         $("#q10").val("")
     });
   </script>
   </body>

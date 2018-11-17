@@ -45,7 +45,7 @@ var friends = [
   {
     name: "Frank",
     photo:
-      "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+      "https://yt3.ggpht.com/a-/AN66SAy8RVT-1Q8VhbBL-Y7gWBCYuqz4IFN4T-s76Q=s900-mo-c-c0xffffffff-rj-k-no",
     scores: [2, 3, 4, 4, 1, 1, 1, 1, 3, 5]
   },
   {
