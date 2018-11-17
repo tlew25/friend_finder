@@ -70,7 +70,7 @@ module.exports = function(app) {
     
       }
     }
-    friends.push(addFriend);
+    friends.push(newFriend);
     res.json({status: "OK", name: friendName, photo: friendPic});
   })
     
