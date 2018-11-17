@@ -66,6 +66,7 @@
           type="email"
           class="form-control"
           placeholder="Your Name"
+          id="name"
         />
       </div>
       <div class="form-group">
@@ -74,6 +75,7 @@
           type="email"
           class="form-control"
           placeholder="URL Link Here"
+          id="photo"
         />
       </div>
       <div class="form-group">
@@ -185,12 +187,12 @@
         </select>
       </div>
       <br>
-      <button type="button" id="#submitFriend" class="btn btn-primary btn-lg btn-block">Submit</button>
+      <button type="button" id="submitFriend" class="btn btn-primary btn-lg btn-block">Submit</button>
     </form>
   </div>
   <!-- button sumbit function here with javascript -->
   <script type="text/javascript">
-    $("#submitFriend").on("click", function(){
+    $(document).on("click", "#submitFriend", function(){
       event.preventDefault();
       var newFriend = {
         name: $("#name").val().trim(),
