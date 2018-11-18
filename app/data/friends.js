@@ -34,13 +34,13 @@ var friends = [
     name: "Vanessa",
     photo:
       "https://imgix.bustle.com/uploads/image/2018/3/16/f4ebf4ec-791b-4c76-b650-057298f60ecf-atl-203_1r.jpg?w=970&h=582&fit=crop&crop=faces&auto=format&q=70",
-    scores: [4, 1, 5, 2, 5, 1, 2, 5, 2, 1]
+    scores: [4, 1, 1, 3, 5, 1, 2, 5, 2, 2]
   },
   {
     name: "Dennis",
     photo:
       "https://www.thewrap.com/wp-content/uploads/2018/01/Always-Sunny-Dennis-Reynolds.jpg",
-    scores: [1, 3, 1, 4, 5, 3, 2, 3, 2, 5]
+    scores: [1, 3, 1, 4, 2, 3, 2, 3, 2, 5]
   },
   {
     name: "Frank",
@@ -52,7 +52,7 @@ var friends = [
     name: "Dee",
     photo:
       "https://imgix.bustle.com/2017/1/4/4aab375c-6513-46e9-a4bc-7db3763e86c2.jpg?w=970&h=582&fit=crop&crop=faces&auto=format&q=70",
-    scores: [3, 2, 5, 5, 5, 3, 2, 4, 4, 4]
+    scores: [1, 2, 1, 5, 1, 3, 1, 1, 1, 4]
   },
   {
     name: "Mac",
