@@ -4,16 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- bootstrap -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
+    <!-- bootstrap -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Patrick+Hand|Sedgwick+Ave" rel="stylesheet">
+    <!-- jQuery script -->
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!-- style.css -->
     <link rel="stylesheet" href="css/style.css" />
   
     <title>Survey</title>
@@ -21,7 +26,7 @@
   <body>
       <br>
     <br />
-    <!-- jQuery function pulls up modal with rsults from score calculations -->
+    <!-- jQuery function pulls up modal with results from score calculations -->
     <div class="modal" id="img-holder" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -52,6 +57,7 @@
         </h5>
       </div>
       <br>
+      <!-- Images -->
       <div class="clearfix">
         <img id="sunny-img" src="/images/Its-Always-Sunny-In-Philadelphia-920x584.png" height="250" width="450">
         <p>Friends</p>
@@ -59,6 +65,9 @@
         <p>Last <em><span id="forever">Forever.</span></em></p>
         <img id="rp-img" src="/images/941143_deviantart-more-like-rocket-power-by-violent-rainbow_900x563_h.jpg" height="250" width="450">
       </div>
+      <!-- End of image slots -->
+
+      <!-- start of questionnaire form -->
     <form>
       <div class="form-group">
         <label for="exampleFormControlInput1">Your Info</label>
@@ -200,8 +209,11 @@
       <button type="button" id="submitFriend" class="btn btn-primary btn-lg btn-block">Submit</button>
     </form>
   </div>
+  <!-- end of form -->
+  
   <!-- button sumbit function here with javascript -->
   <script type="text/javascript">
+
     $(document).on("click", "#submitFriend", function(){
       event.preventDefault();
       var newFriend = {
@@ -212,8 +224,11 @@
       alert("Searching for bestie...");
       $.post("/api/friends", newFriend)
         .done(function(data){
-          console.log(data);
-          console.log(data.photo);
+
+          console.log("Found them!!!!");
+          // console.log(data.photo);
+
+          // function allows the modal to display data from friends.js 
           $("#img-holder").hide();
           $("#img-holder").show(data.scores);
           $("#results-txt").text(data.name);
@@ -222,6 +237,7 @@
             $("#img-holder").hide();
           })
         });
+        // empties out all input after submission is made by subbing the values with "" marks which is the first option on the select
         $("#name").val("");
         $("#photo").val("");
          $("#q1").val("")
