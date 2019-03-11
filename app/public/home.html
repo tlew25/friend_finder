@@ -1,53 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>FriendFinder</title>
-
-    <!-- bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
-    <!-- bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Patrick+Hand|Sedgwick+Ave" rel="stylesheet">
-    <!-- jQuery script -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <!-- style.css -->
-    <link rel="stylesheet" href="css/style.css" />
-    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cracker Dog Kennel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
+
 <body>
-  <br>
-  <div class="container">
+    <!-- Start of Navbar -->
+    <nav id="nav-color" class="navbar fixed-top navbar-light">
+        <img class="logo" src="/images/Screen Shot 2019-03-10 at 1.40.49 AM.png" alt="logo" height=".65%" width="38%">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            <img src="" alt="" srcset="">
+        </button>
 
-    <div class="jumbotron">
-      <h1 class="text-center"><span class="fa fa-user"></span>FriendFinder</h1>
-      <hr>
-      <h2 class="text-center">
-          <em>Where you find friends.</em>
-      </h2>
-      <br>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">Emergency Information</a>
+                        </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button id="btn-color" class="btn my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <!-- End of navbar -->
+<div class="container">
+    <!-- Start of Welcome Display -->
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4 text-center">Welcome</h1>
+              <img id="staff-photo" src="/images/IMG_0843.jpeg" alt="staff-photo" height="auto" width="25%">
+              <p class="lead">Posey is our little Crackerdog. She is a 25lb Schipperke mix that we rescued from Town Lake Animal Shelter. Posey is "going crackerdog" when she gets a burst of energy and runs around really fast all over for no reason. It is sort of a happy dance. She has always done this but we never had a name for it until we heard the term in Dog Stories by James Harriot. Our logo is a picture of Posey going Crackerdog.</p>
+            </div>
+          </div>
+          <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="showcase-left">
+                        <p>Content</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="showcase-right">
+                     <p>Content here</p>
+                    </div>
+                </div>
+            </div>
+            <div id="message-board" class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                      <h1 class="display-4">Message Board</h1>
+                      <p class="lead">Events</p>
+                    </div>
+                  </div>
+        </div>
+    <!-- End of Welcome Display -->
 
-      <div class="text-center">
-        <a href="/survey"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> Survey </button></a>
-      </div>
 
-    </div>
-
-    <footer class="footer">
-      <div class="container">
-        <p id="home-p"><a href="/api/friends"> Friends API Table Link</a> | <a href="https://github.com/tlew25/friend_finder">GitHub tlew25</a>
-      </div>
-    </footer>
-
-  </div>
-
-
+    <!-- Scripts for Jquery and JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1,107 +1,39 @@
-/* CSS for FriendFinder  Express */
-form{
- width: 40%;
- margin: auto;
- display: block;
- border-style: solid;
- border-color: #000;
- margin-left: 175px;
- float: left;
- margin-bottom: 95px;
-}
-.form-group{
-    margin-top: 20px;
-    margin-right: 30px;
-    margin-left: 30px;
-    padding: 0;
-}
 body{
-    background-color: #4599CE;
+    margin-top: 20%;
+    background-color: #A23E34;
 }
-p{
-font-family: 'Comfortaa', cursive;
-font-size: 25pt;
-color: #eee;
+#nav-color{
+border-bottom: 3px solid #108D90;
+background-color: #BFDED3;
+opacity: 0.96;
+margin-bottom: 2%;
 }
-h1, h5, h2{
-    font-family: 'Comfortaa', cursive;
-    text-align: center;
+#btn-color{
+    background-color: #A23E34;
 }
-option{
-    background-color: #eee;
+.jumbotron {
+    border-radius: 1%;
+    border: 3px solid #108D90;
+    background-color: #BFDED3;
 }
-a{
-    text-decoration: none;
-    color: #eee;
+#message-board{
+    margin-top: 10%;
 }
-.btn-primary{
-    background-color: #4599CE;
-    font-family: 'Comfortaa', cursive;
+.logo{
+border-radius: 1%;
+border: 3px solid #A23E34;
 }
-label{
-    color: #eee;
-    font-family: 'Comfortaa', cursive;
-}
-#sunny-img,#atl-img{
-  float: right;
-  margin-bottom: 25px;
-  
-}
-#rp-img, #sunny-img, #atl-img{
-    border-style: solid;
-    border-color: #000;
-}
-.btn-block{
-    background-color: #000;
-    margin: auto;
-    margin-bottom: 10px;
-    width: 90%;
-    display: block;
-    
-}
-.clearfix{
-  float: right;
-  overflow: hidden;
- margin-right: 150px;
- margin-top: 90px;
-}
-.jumbotron, .text-center{
-    width: 60%;
-    display: block;
-    margin: auto;
-}
-.jumbotron{
-    border-style: solid;
-    border-color: #000;
-    background-color: #eee;
-    display: block;
-    margin: auto;
-}
-footer, .container{
-    margin-top: 15px;
-    display: block;
-    margin-left: 105px;
-}
-#forever{
-    color:#000;
-    font-size: 60pt;
-}
-#home-p{
-    font-size: 12pt;
-}
-#pic-font{
-    color: #000;
-}
-.form:hover {
-    box-shadow: 3px 3px 3px #eee;
-    margin-bottom: 10px;
-    cursor: pointer;
+.showcase-right, .showcase-left {
+    margin-top: 10%;
+    border-radius: 3px;
+    border: 3px solid #108D90;
+    max-height: 100%;
+    padding: 20px;
+    background-color: #BFDED3;
   }
-
-
-
-
-  
-
-  
-  
+  /* Image Boxes */
+  #staff-photo{
+      display: block;
+      margin: auto;
+      margin-bottom: 2%;
+  }
